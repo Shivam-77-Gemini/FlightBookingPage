@@ -5,19 +5,19 @@
     
             <ul class="navbar-nav">
                 
-                <li class="nav-item" id="first"> <h6>Shivam</h6></li>
-                <li class="nav-item"> <h6>Shivam</h6></li>
-                <li class="nav-item"> <h6>Shivam</h6></li>
-                <li class="nav-item" > <h6>Shivam</h6></li>
+                <li class="nav-item" id="first"> <h6>Departure</h6></li>
+                <li class="nav-item"> <h6 (click)="onDuration()">Duration</h6></li>
+                <li class="nav-item"> <h6>Arrival</h6></li>
+                <li class="nav-item" > <h6 (click)="onPrice()" >Price</h6></li>
 
             </ul>
     </nav>
 
 
-<div *ngFor="let item of flightDetail">
+<div *ngFor="let item of flightDetail" >
 
     <!-- First Card-->
-    <div class="card mb-3" *ngIf="item.flightName==='Vistara'">
+    <div class="card mb-3" >
         <div class="card-body" style="height:200px;">
             <table class="table table-borderless">
                 <tbody>
@@ -41,8 +41,7 @@
                             
                         </td>
                         <td style="margin-top: 2px;"  class="text-center">
-                            <!-- <span>BOM</span><span class="text-muted" style="font-size:10px;margin-left:8px;">Mumbai,India</span><br>
-                            <span style="font-weight: bold; margin-left: 60px;" class="d-flex justify-content-start" >20:45</span> -->
+                            
                             <div class="row">
                                 <div class="col-6"></div>
                                 <div class="col-6">
@@ -106,7 +105,7 @@
 
 
 <!--Second Card-->
-<div class="card mb-3" *ngIf="item.flightName==='Spicejet'">
+<div class="card mb-3" >
         <div class="card-body" style="height:200px;">
             <table class="table table-borderless">
                 <tbody>
@@ -130,8 +129,7 @@
                             
                         </td>
                         <td style="margin-top: 2px;"  class="text-center">
-                            <!-- <span>BOM</span><span class="text-muted" style="font-size:10px;margin-left:8px;">Mumbai,India</span><br>
-                            <span style="font-weight: bold; margin-left: 60px;" class="d-flex justify-content-start" >20:45</span> -->
+                            
                             <div class="row">
                                 <div class="col-6"></div>
                                 <div class="col-6">
@@ -186,7 +184,17 @@
 
 
 
-    <!---Third Card -->
+
+
+
+
+
+
+
+
+
+
+    <!-- -Third Card -->
 
     <div class="card mb-3">
         <div class="card-body" style="height:200px;">
@@ -195,7 +203,7 @@
                     <tr class="mb-1">
                         <td>
                             <span><img src="../../assets/images/vitara.png" alt="Loading!" style="width: 30px;height:30px;"></span>
-                           <span class="text-muted" style="margin-left:20px;">Vistara</span> </td>
+                           <span class="text-muted" style="margin-left:20px;">{{item.flightName}}</span> </td>
                         <td></td>
                         <td></td>
                         <td></td>
@@ -203,22 +211,21 @@
                     </tr>
                     <tr>
                         <td>
-                            <div style="height:1px"><span>DEL</span><span class="text-muted" style="font-size:10px;margin-left:8px;">New Delhi,India</span></div><br>
-                            <span style="font-weight: bold;">17:45</span>
+                            <div style="height:1px"><span>{{item.startStation}}</span><span class="text-muted" style="font-size:10px;margin-left:8px;">{{item.startPlace}}</span></div><br>
+                            <span style="font-weight: bold;">{{item.departureTime}}</span>
                         </td>
                         <td class="text-center"> 
-                            <div style="font-weight: bold; margin-top: 10px;" class="text-center d-flex align-items-end"> <span style="margin-top:14.6px;">2h 20m</span> 
+                            <div style="font-weight: bold; margin-top: 10px;" class="text-center d-flex align-items-end"> <span style="margin-top:14.6px;">{{item.journeyTime}}</span> 
                             </div>
                             
                         </td>
                         <td style="margin-top: 2px;"  class="text-center">
-                            <!-- <span>BOM</span><span class="text-muted" style="font-size:10px;margin-left:8px;">Mumbai,India</span><br>
-                            <span style="font-weight: bold; margin-left: 60px;" class="d-flex justify-content-start" >20:45</span> -->
+                            
                             <div class="row">
                                 <div class="col-6"></div>
                                 <div class="col-6">
-                                    <span>BOM</span><span class="text-muted" style="font-size:10px;margin-left:8px;">Mumbai,India</span><br>
-                                    <span style="font-weight: bold;margin-left: 4px;" class="d-flex justify-content-start" >20:45</span>
+                                    <span>{{item.destinationStation}}</span><span class="text-muted" style="font-size:10px;margin-left:8px;">{{item.destinationPlace}}</span><br>
+                                    <span style="font-weight: bold;margin-left: 4px;" class="d-flex justify-content-start" >{{item.arrivalTime}}</span>
                                 </div>
                             </div>
                         </td>
@@ -230,27 +237,19 @@
                                 <div class="col-6">
                                     <div class="rupaya" style="width: 160px; height: 60px; margin-top: 24px;">
                                         <h5 class="d-flex justify-content-end" style="margin-right: 28px;">
-                                            &#x20B9;6,676
+                                            &#x20B9;{{item.flightPrice}}
                                         </h5>
                                         <span style="font-size: 12px;" class="text-muted">No cost EMI from<span style="font-weight: bold;" class="text-dark">&#x20B9;2,076</span></span>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="rupaya" style="width: 160px; height: 60px; margin-top: 24px;">
-                                <h5 class="d-flex justify-content-end" style="margin-right: 28px;">
-                                    &#x20B9;6,676
-                                </h5>
-                                <span style="font-size: 12px;" class="text-muted">No cost EMI from<span style="font-weight: bold;" class="text-dark">&#x20B9;2,076</span></span>
-                            </div> -->
+                           
                         </td>
                         <td style="width: 100px;">
                          
                             <div class="rupaya d-flex justify-content-start" style="width: 160px; height: 60px; margin-top: 24px; padding-right: 50px;">
                                 <button class="btn text-light" style="width:120px; height:40px; background-color: #f37638; ">Book</button>
-                                <!-- <h5 class="d-flex justify-content-end" style="margin-right: 28px;">
-                                    &#x20B9;6,676
-                                </h5>
-                                <span style="font-size: 12px;" class="text-muted">No cost EMI from<span style="font-weight: bold;" class="text-dark">&#x20B9;2,076</span></span> -->
+                               
                             </div>
                         </td>
                     </tr>
@@ -268,7 +267,26 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

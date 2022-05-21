@@ -9,7 +9,7 @@ export class BookingServiceService {
   getALlFlighDetails(){
     return [{
       "flightName":"Vistara",
-      "flightPrice":"6,676",
+      "flightPrice":"7178",
       "departureTime":"17:45",
       "arrivalTime":"20:05",
       "journeyTime":"2h 20m",
@@ -21,10 +21,10 @@ export class BookingServiceService {
     },
     {
       "flightName":"Spicejet",
-      "flightPrice":"7,776",
+      "flightPrice":"3776",
       "departureTime":"18:35",
       "arrivalTime":"20:50",
-      "journeyTime":"2h 15m",
+      "journeyTime":"1h 15m",
       "costEmi":"2,592",
       "startPlace":"New Delhi, India",
       "startStation":"DEL",
@@ -33,10 +33,10 @@ export class BookingServiceService {
     },
     {
       "flightName":"Spicejet",
-      "flightPrice":"7,776",
+      "flightPrice":"5776",
       "departureTime":"19:45",
       "arrivalTime":"22:05",
-      "journeyTime":"2h 20m",
+      "journeyTime":"3h 20m",
       "costEmi":"2,592",
       "startPlace":"New Delhi, India",
       "startStation":"DEL",
