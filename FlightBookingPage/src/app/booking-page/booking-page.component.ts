@@ -36,33 +36,89 @@ export class BookingPageComponent implements OnInit {
   //    }
    price:any=0;
    duration:any=0;
- onPrice(){
-  if(this.price==0){
-    this.price++;
-     this.flightDetail=this.flightDetail.sort((first:any,second:any)=>first.flightPrice-second.flightPrice);
-  }
-  else if(this.price==1){
-    this.flightDetail=this.flightDetail.sort((first:any,second:any)=>second.flightPrice-first.flightPrice);
+//  onPrice(){
+//   if(this.price==0){
+//     this.price++;
+//      this.flightDetail=this.flightDetail.sort((first:any,second:any)=>first.flightPrice-second.flightPrice);
+//   }
+//   else if(this.price==1){
+//     this.flightDetail=this.flightDetail.sort((first:any,second:any)=>second.flightPrice-first.flightPrice);
   
-  }
-  else{
-    this.flightDetail=this.secondFlightDetails;
-  }
+//   }
+//   else{
+//     this.flightDetail=this.secondFlightDetails;
+//   }
+// }//  = myArrayObjects.sort(function(a, b) {
+//   return a.name.localeCompare(b.name, undefined, {
+//     numeric: true,
+//     sensitivity: 'base'
+//   });
+// });
+  
+onPrice(){
+ this.flightDetail=this.flightDetail.sort(function(first:any,second:any){
+                  return first.flightPrice.localeCompare(second.flightPrice,undefined,{
+                                                                    numeric:true,
+                                                                    sensitivity:'base'
+                                                                                    });
+ });
 }
-onDuration(){
-  if(this.duration==0){
-    this.duration++;
-     this.flightDetail=this.flightDetail.sort((first:any,second:any)=>first.flightDuration-second.flightDuration);
-  }
-  else if(this.duration==1){
-    this.flightDetail=this.flightDetail.sort((first:any,second:any)=>second.flightDuration-first.flightDuration);
-  
-  }
-  else{
-    this.flightDetail=this.secondFlightDetails;
-  }
+ onDuration(){
+  this.flightDetail=this.flightDetail.sort(function(first:any,second:any){
+                return first.journeyTime.localeCompare(second.journeyTime,undefined,{
+                                                                    numeric:true,
+                                                                    sensitivity:'base'
+                                                                                    });
+  });
   
 }
+onDepartureTime(){
+  this.flightDetail=this.flightDetail.sort(function(first:any,second:any){
+    return first.departureTime.localeCompare(second.departureTime,undefined,{
+                                                        numeric:true,
+                                                        sensitivity:'base'
+                                                                        });
+});
+    
+}
+
+onArrivalTime(){
+  this.flightDetail=this.flightDetail.sort(function(first:any,second:any){
+    return first.arrivalTime.localeCompare(second.arrivalTime,undefined,{
+                                                        numeric:true,
+                                                        sensitivity:'base'
+                                                                        });
+});
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// onDuration(){
+//   // this.flightDetail.sort((first:any,second:any)=>(new Intl.Collator().compare(first.flightPrice,second.flightPrice)));
+//   // if(this.duration==0){
+//   //   this.duration++;
+//   //   //  this.flightDetail=this.flightDetail.sort((first:any,second:any)=>(first.departureTime-second.departureTime)?1:0);
+//   // }
+//   // else if(this.duration==1){
+//   //   this.flightDetail=this.flightDetail.sort((first:any,second:any)=>(second.departureTime-first.departureTime)?1:((first.departureTime-second.departureTime)?-1:0));
+  
+//   // }
+//   // else{
+//   //   this.flightDetail=this.secondFlightDetails;
+//   // }
+  
+// }
+// objs.sort((a,b) => (a.last_nom > b.last_nom) ? 1 : ((b.last_nom > a.last_nom) ? -1 : 0))
   ngOnInit(): void {
   }
 

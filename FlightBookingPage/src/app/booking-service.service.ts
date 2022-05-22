@@ -9,7 +9,7 @@ export class BookingServiceService {
   getALlFlighDetails(){
     return [{
       "flightName":"Vistara",
-      "flightPrice":"7178",
+      "flightPrice":"7,178",
       "departureTime":"17:45",
       "arrivalTime":"20:05",
       "journeyTime":"2h 20m",
@@ -21,7 +21,7 @@ export class BookingServiceService {
     },
     {
       "flightName":"Spicejet",
-      "flightPrice":"3776",
+      "flightPrice":"3,776",
       "departureTime":"18:35",
       "arrivalTime":"20:50",
       "journeyTime":"1h 15m",
@@ -33,7 +33,7 @@ export class BookingServiceService {
     },
     {
       "flightName":"Spicejet",
-      "flightPrice":"5776",
+      "flightPrice":"5,776",
       "departureTime":"19:45",
       "arrivalTime":"22:05",
       "journeyTime":"3h 20m",
