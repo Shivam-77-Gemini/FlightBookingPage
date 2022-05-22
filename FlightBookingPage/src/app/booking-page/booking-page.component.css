@@ -1,9 +1,80 @@
-h6{
-    margin-right:300px;
+#nav-header{
+    background-color: #ffffff;
+}
+.card-body{
+    height:200px;
+}
+.head{
+    margin-right: 260px;
+}
+h6:hover {
+    background-color: #ffffff;
+    color: blue;
+  }
+.image-size{
+    width: 30px;
+    height:30px;
+}
+.name-flight{
+    margin-left:20px;  
+}
+.main-tr2-td1{
+    height:1px;
+
+}
+.start-place{
+    font-size:10px;margin-left:8px;
+}
+.main-tr2-td1-span{
+    font-weight: bold
+}
+.journey-time{
+    margin-right:24px;
 }
 #first{
     margin-left: 60px;
 }
-#rupaya{
-    
+.rupaya{
+    width: 160px; height: 60px; margin-top: 24px;
+}
+.journey-time{
+    margin-top:14.6px;
+}
+.span-second{
+    font-weight: bold; margin-top: 10px;
+}
+.td-destination{
+    margin-top: 2px;
+}
+.destination-place{
+    font-size:10px;
+    margin-left:8px;
+}
+.arrival-time{
+    font-weight: bold;
+    margin-left: 0px;  
+}
+.flight-price{
+    margin-right: 28px;
+}
+.cost-emi{
+    font-weight: bold;
+}
+.cost-text{
+    font-size: 12px;
+}
+.td-3-size{
+    width: 100px;  
+}
+.book-button{
+    width: 160px; height: 60px; margin-top: 24px; padding-right: 50px;
+}
+.book-karo{
+    width:120px; height:40px; background-color: #f37638;
+}
+.refund-text{
+    font-size: 15px;
+}
+.flight-details{
+    font-size: 13px; font-weight: bold;
 }

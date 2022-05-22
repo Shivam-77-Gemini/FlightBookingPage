@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { BookingPopUpComponent } from '../booking-pop-up/booking-pop-up.component';
 import { BookingServiceService } from '../booking-service.service';
 
 @Component({
@@ -10,7 +12,7 @@ export class BookingPageComponent implements OnInit {
   flightDetail:any=[];
   secondFlightDetails:any=[];
   // compare: any;
-  constructor(private bookingServices:BookingServiceService) {
+  constructor(private bookingServices:BookingServiceService,public dialog:MatDialog) {
   this.flightDetail=this.bookingServices.getALlFlighDetails();
   this.secondFlightDetails=this.bookingServices.getALlFlighDetails();
   // this.flightDetail=this.flightDetail.sort((first:any,second:any)=>first.flightPrice-second.flightPrice);
@@ -54,6 +56,9 @@ export class BookingPageComponent implements OnInit {
 //     sensitivity: 'base'
 //   });
 // });
+onBook(){
+this.dialog.open(BookingPopUpComponent);
+}
   
 onPrice(){
  this.flightDetail=this.flightDetail.sort(function(first:any,second:any){

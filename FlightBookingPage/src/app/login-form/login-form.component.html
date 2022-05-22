@@ -1,0 +1,32 @@
+<div class="container text-center" class="main-container" >
+    <form class="card w-50 mt-5 bg-dark" ngModel name="signInForm" #signInForm="ngForm" ngDefaultControl >
+        <div class="card-body text-center">
+            <h1 class="text-info text-center mb-3">Sign In</h1>
+          <div class="form-floating mb-2">
+            <input type="email" class="form-control is-invalid" id="floatingInput" placeholder="somrthing@12" ngModel name="userId" #userId="ngModel" required minlength="8" maxlength="8" pattern="Admin@12">
+            <label for="floatingInput">Email address</label>
+          </div>
+          <div *ngIf="userId.errors&& (userId.touched||userId.dirty)" class="text-danger mb-1">
+              <small *ngIf="userId.errors?.['required']">Please Fill your UserId!</small>
+              <small *ngIf="userId.errors?.['pattern']">Please Fill your Correct UserID!</small>
+              <small *ngIf="userId.errors?.['minlength']">Your email should contain atleast 8 characters!</small>
+              <small *ngIf="userId.errors?.['maxlength']">Your email should contain atmost 8 characters!</small>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="password" class="form-control is-invalid" id="floatingPassword" placeholder="Password" ngModel name="password" #password="ngModel" required minlength="8" maxlength="8" pattern="Admin@12">
+            <label for="floatingPassword">Password</label>
+            <div *ngIf="password.errors&& (password.touched||password.dirty)" class="text-danger mb-1">
+                <small *ngIf="password.errors?.['required']">Please Fill your Password!</small>
+                <small *ngIf="password.errors?.['pattern']">Please Fill your correct Password!</small>
+                <small *ngIf="password.errors?.['minlength']">Your password should contain atleast 8 characters!</small>
+                <small *ngIf="password.errors?.['maxlength']">Your password should contain atmost 8 characters!</small>
+            </div>
+          </div>
+          <button class="btn btn-danger mb-3" routerLink="/boookingpage" [disabled]="!signInForm.form.valid">LOGIN</button>
+    </div>
+</form>
+
+</div>
+<router-outlet></router-outlet>
+
+

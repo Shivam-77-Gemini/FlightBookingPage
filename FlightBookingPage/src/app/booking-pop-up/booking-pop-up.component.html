@@ -1,0 +1,56 @@
+<div  mat-card class="w-50 bg-dark">
+    <h4 mat-title class="text-success text-center ">
+        Flight Booking Details
+    </h4>
+    <nav mat-card-header class="nav-bar text-center bg-info text-warning"><h3>{{item.flightName}}</h3></nav>
+
+    <div mat-dialog-content class="mb-3"><table class="table table-striped table-dark table-borderless">
+        <tbody>
+          <tr>
+            
+            <td>Flight Name</td>
+            <td>{{item.flightName}}</td>
+            
+          </tr>
+          <tr>
+            
+            <td>Source</td>
+            <td>{{item.startPlace}}</td>
+            
+          </tr>
+          <tr>
+            
+            <td>Destination</td>
+            <td>{{item.destinationPlace}}</td>
+            
+          </tr>
+          <tr>
+            
+            <td>Price</td>
+            <td>{{item.flightPrice}}</td>
+            
+          </tr>
+          <tr>
+            
+            <td>Departure Time</td>
+            <td>{{item.departureTime}}</td>
+          </tr>
+          <tr>
+           
+            <td>Arrival Time</td>
+            <td>{{item.arrivalTime}}</td>
+          </tr>
+          
+
+        </tbody>
+        
+        
+        
+      </table>
+      <div mat-dialog-actions>
+        <button class="btn btn-primary mb-3" id="first-button" (click)="onPay()" mat-dialog-close> Pay</button>
+        <button class="btn btn-danger mb-3" id="second-button" mat-button mat-dialog-close>Cancel</button>
+    </div>
+      </div>
+</div>
+<router-outlet></router-outlet>
