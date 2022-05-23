@@ -19,7 +19,7 @@
 <div *ngFor="let item of flightDetail" >
 
     <!-- First Card-->
-    <div class="card mb-3" >
+    <div class="card mb-3" *ngIf="item.flightName==='Vistara'">
         <div class="card-body" style="height:200px;" id="body-Card">
             <table class="table table-borderless">
                 <tbody>
@@ -71,7 +71,7 @@
                         <td s class="td-3-size">
                          
                             <div class="rupaya d-flex justify-content-start book-button">
-                                <button class="btn text-light book-karo"  (click)="onBook()" >Book</button>
+                                <button class="btn text-light book-karo"  (click)="onBook(item)" >Book</button>
                                
                             </div>
                         </td>
@@ -100,15 +100,15 @@
 
 
 
-<!--Second Card-->
 
-    <div class="card mb-3" >
+
+    <div class="card mb-3" *ngIf="item.flightName==='Spicejet'" >
         <div class="card-body" style="height:200px;" id="body-Card">
             <table class="table table-borderless">
                 <tbody>
                     <tr class="mb-1">
                         <td>
-                            <span><img src="../../assets/images/vitara.png" alt="Loading!"  class="image-size"></span>
+                            <span><img src="../../assets/images/spiceZet.png" alt="Loading!"  class="image-size"></span>
                            <span class="text-muted name-flight" >{{item.flightName}}</span> </td>
                         <td></td>
                         <td></td>
@@ -154,7 +154,7 @@
                         <td s class="td-3-size">
                          
                             <div class="rupaya d-flex justify-content-start book-button">
-                                <button class="btn text-light book-karo"  (click)="onBook()" >Book</button>
+                                <button class="btn text-light book-karo"  (click)="onBook(item)" >Book</button>
                                 
                             </div>
                         </td>
@@ -193,10 +193,9 @@
 
 
 
-    <!-- -Third Card -->
-
     
-    <div class="card mb-3" >
+    
+    <!-- <div class="card mb-3" >
         <div class="card-body" style="height:200px;" id="body-Card">
             <table class="table table-borderless">
                 <tbody>
@@ -248,7 +247,7 @@
                         <td s class="td-3-size">
                          
                             <div class="rupaya d-flex justify-content-start book-button">
-                                <button class="btn text-light book-karo"  (click)="onBook()">Book</button>
+                                <button class="btn text-light book-karo"  (click)="onBook(item)">Book</button>
                                 
                             </div>
                         </td>
@@ -269,7 +268,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+    </div> -->
 
 
 

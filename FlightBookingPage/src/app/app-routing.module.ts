@@ -8,8 +8,7 @@ const routes: Routes = [{path:'',redirectTo:'/login',pathMatch:'full'},
 
 {path:'login',redirectTo:'/boookingpage',pathMatch:'full'},
 {path:'login',component:LoginFormComponent},
-{path:'boookingpage',component:BookingPageComponent},
-{path:'popup',component:BookingPopUpComponent}
+{path:'boookingpage',component:BookingPageComponent}
 ];
 
 @NgModule({

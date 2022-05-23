@@ -27,14 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     MatDialogModule,
     BrowserAnimationsModule
   ],
-  providers: [{
-    provide: MAT_DIALOG_DATA,
-    useValue: {
-      collapsedHeight: '80px',
-      expandedHeight: '80px',
-      hideToggle: true
-    }
-  }],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
