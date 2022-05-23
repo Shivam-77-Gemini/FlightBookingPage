@@ -1,6 +1,11 @@
 import { Component, OnInit ,Inject} from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { BsModalRef } from 'ngx-bootstrap/modal';
+// import { title } from 'process';
+import Swal from 'sweetalert2';
 // import { BookingServiceService } from '../booking-service.service';
+
+
 
 @Component({
   selector: 'app-booking-pop-up',
@@ -9,20 +14,29 @@ import { MatDialog, MAT_DIALOG_DATA} from '@angular/material/dialog';
 })
 export class BookingPopUpComponent implements OnInit {
 details:any=[];
-  constructor(@Inject(MAT_DIALOG_DATA) public item:any,public dialog:MatDialog) {
-  
 
+  constructor(@Inject(MAT_DIALOG_DATA) public item:any,public dialog:MatDialog) {
    }
    onPay(){
-     alert("You have booked Flight Successfully");
+    Swal.fire({
+      
+      icon: 'success',
+      title: 'You booked Successfully!',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    
+    
    }
-  //  onCancel(){
-  //     this.dialog.closeAll();
-
-  //  }
+   onCancel(){
+     alert('You have cancelled your booking!');
+   }
+  
+ 
 
   ngOnInit(): void {
-    console.log(this.item);
+    
   }
 
 }
+
